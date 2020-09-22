@@ -1,0 +1,16 @@
+<h4>Sign Up</h4>
+
+<%= form_for @user, url: signup_path, html: {autocomplete: "off"} do |f| %>
+  <%= f.label :name, "Username: " %>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :password, "Password: " %>
+  <%= f.password_field :password %><br><br>
+
+  <%= f.label :password_confirmation, "Password Confirmation: " %>
+  <%= f.password_field :password_confirmation %><br><br>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+<p><%= flash[:alert] if flash[:alert] %></p>
